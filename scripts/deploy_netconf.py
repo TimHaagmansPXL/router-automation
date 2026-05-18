@@ -33,6 +33,7 @@ def main():
             username=ROUTER_USER,
             password=ROUTER_PASS,
             hostkey_verify=False,
+            unknown_host_cb=lambda host, fingerprint: True,
             device_params={'name': 'iosxe'}
         ) as m:
             print(f"[+] Succesvol verbonden met de router via NETCONF!")
