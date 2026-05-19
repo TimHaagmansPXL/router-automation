@@ -1,89 +1,20 @@
 <rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="101">
-  <edit-config>
-    <target>
-      <running/>
-    </target>
-    <config>
-      <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
-        <banner>
-          <motd>
-            <banner>Welkom</banner>
-          </motd>
-        </banner>
-        <hostname>RouterAutomation</hostname>
-        <username>
-          <name>extra_admin</name>
-          <privilege>15</privilege>
-          <description>extra admin</description>
-          <password>
-            <encryption>0</encryption>
-            <password>BackupAdmin123!</password>
-          </password>
-        </username>
-        <ip>
-          <route>
-            <ip-route-interface-forwarding-list>
-              <prefix>0.0.0.0</prefix>
-              <mask>0.0.0.0</mask>
-              <fwd-list>
-                <fwd>192.168.56.1</fwd>
-                <interface-next-hop>
-                  <ip-address>192.168.56.1</ip-address>
-                </interface-next-hop>
-              </fwd-list>
-            </ip-route-interface-forwarding-list>
-          </route>
-        </ip>
-        <interface>
-          <GigabitEthernet>
-            <name>0/0/1</name>
-            <description>LAN interne gebruikers</description>
-            <ip>
-              <address>
-                <primary>
-                  <address>10.0.10.1</address>
-                  <mask>255.255.255.0</mask>
-                </primary>
-              </address>
-            </ip>
-            <speed xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ethernet">
-              <auto/>
-            </speed>
-            <duplex xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ethernet">auto</duplex>
-          </GigabitEthernet>
-          <Loopback>
-            <name>100</name>
-            <description>loopback</description>
-            <ip>
-              <address>
-                <primary>
-                  <address>10.100.100.100</address>
-                  <mask>255.255.255.255</mask>
-                </primary>
-              </address>
-            </ip>
-          </Loopback>
-        </interface>
-        <router>
-          <router-ospf xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ospf">
-            <ospf>
-              <process-id>
-                <id>1</id>
-                <network>
-                  <ip>10.0.10.0</ip>
-                  <wildcard>0.0.0.255</wildcard>
-                  <area>0</area>
-                </network>
-                <network>
-                  <ip>10.100.100.100</ip>
-                  <wildcard>0.0.0.0</wildcard>
-                  <area>0</area>
-                </network>
-              </process-id>
-            </ospf>
-          </router-ospf>
-        </router>
-      </native>
-    </config>
-  </edit-config>
+  <edit-config>
+    <target>
+      <running/>
+    </target>
+    <config>
+      <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+        <banner>
+          <login>
+            <banner>Welkom</banner>
+          </login>
+          <motd>
+            <banner>Ingesteld met Netconf</banner>
+          </motd>
+        </banner>
+        <hostname>FysiekeRouter</hostname>
+      </native>
+    </config>
+  </edit-config>
 </rpc>
