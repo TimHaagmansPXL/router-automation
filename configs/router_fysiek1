@@ -1,0 +1,63 @@
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="101">
+  <edit-config>
+    <target>
+      <running/>
+    </target>
+    <config>
+      <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+        <banner>
+          <login>
+            <banner>Welkom</banner>
+          </login>
+          <motd>
+            <banner>Ingesteld met netconf</banner>
+          </motd>
+        </banner>
+        <hostname>FysiekeRouter1</hostname>
+        <username>
+          <name>extra_admin</name>
+          <password>
+            <encryption>0</encryption>
+            <password>test_admin</password>
+          </password>
+        </username>
+        <ip>
+          <route>
+            <ip-route-interface-forwarding-list>
+              <prefix>0.0.0.0</prefix>
+              <mask>0.0.0.0</mask>
+              <fwd-list>
+                <fwd>GigabitEthernet1</fwd>
+                <interface-next-hop>
+                  <ip-address>192.168.56.1</ip-address>
+                </interface-next-hop>
+              </fwd-list>
+            </ip-route-interface-forwarding-list>
+          </route>
+        </ip>
+        <interface>
+          <GigabitEthernet>
+            <name>1</name>
+            <description>LAN</description>
+            <ip>
+              <address>
+                <primary>
+                  <address>10.0.10.1</address>
+                  <mask>255.255.255.0</mask>
+                </primary>
+              </address>
+            </ip>
+            <speed xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ethernet">
+              <auto/>
+            </speed>
+            <duplex xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ethernet">auto</duplex>
+          </GigabitEthernet>
+          <Loopback>
+            <name>100</name>
+            <description>loopback</description>
+          </Loopback>
+        </interface>
+      </native>
+    </config>
+  </edit-config>
+</rpc>
