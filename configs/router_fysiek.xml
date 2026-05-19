@@ -5,7 +5,21 @@
     </target>
     <config>
       <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+        <banner>
+          <motd>
+            <banner>Welkom</banner>
+          </motd>
+        </banner>
         <hostname>CSR1000V-Automation</hostname>
+        <username>
+          <name>extra_admin</name>
+          <privilege>15</privilege>
+          <description>extra admin</description>
+          <password>
+            <encryption>0</encryption>
+            <password>BackupAdmin123!</password>
+          </password>
+        </username>
         <ip>
           <route>
             <ip-route-interface-forwarding-list>
@@ -32,6 +46,10 @@
                 </primary>
               </address>
             </ip>
+            <speed xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ethernet">
+              <auto/>
+            </speed>
+            <duplex xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ethernet">auto</duplex>
           </GigabitEthernet>
           <GigabitEthernet>
             <name>3</name>
@@ -70,6 +88,11 @@
             </ospf>
           </router-ospf>
         </router>
+      </native>
+    </config>
+  </edit-config>
+</rpc>
+
       </native>
     </config>
   </edit-config>
