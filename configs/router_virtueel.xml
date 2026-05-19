@@ -1,1 +1,18 @@
-<test>Dit is een tijdelijke payload</test>
+<config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+    <interface>
+      <Loopback>
+        <name>100</name>
+        <description>NETCONF School Project Loopback</description>
+        <ip>
+          <address>
+            <primary>
+              <address>10.100.100.100</address>
+              <mask>255.255.255.255</mask>
+            </primary>
+          </address>
+        </ip>
+      </Loopback>
+    </interface>
+  </native>
+</config>
