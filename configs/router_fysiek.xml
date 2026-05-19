@@ -13,7 +13,7 @@
             <banner>Ingesteld met netconf</banner>
           </motd>
         </banner>
-        <hostname>FysiekeRouterTest</hostname>
+        <hostname>FysiekeRouter12</hostname>
         <username>
           <name>extra_admin</name>
           <password>
