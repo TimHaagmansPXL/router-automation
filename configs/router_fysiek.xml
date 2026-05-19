@@ -1,20 +1,11 @@
-<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="101">
-  <edit-config>
-    <target>
-      <running/>
-    </target>
-    <config>
-      <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
-        <banner>
-          <login>
-            <banner>Welkom</banner>
-          </login>
-          <motd>
-            <banner>Ingesteld met Netconf</banner>
-          </motd>
-        </banner>
-        <hostname>FysiekeRouter</hostname>
-      </native>
-    </config>
-  </edit-config>
-</rpc>
+<native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+  <banner>
+    <login>
+      <banner>Welkom</banner>
+    </login>
+    <motd>
+      <banner>Ingesteld met Netconf</banner>
+    </motd>
+  </banner>
+  <hostname>FysiekeRouter</hostname>
+</native>
