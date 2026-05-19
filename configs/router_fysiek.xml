@@ -1,5 +1,5 @@
-      <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
-        <banner>
+<native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+      <banner>
           <login>
             <banner>Welkom</banner>
           </login>
